@@ -42,15 +42,29 @@
                             </li>
                             <li class="active">
                                 <i class="fa fa-file"></i> 
-                                <?php
-                           $sql = "SELECT * FROM user WHERE id= 1";
-                           $result = $database->query($sql);
-                           $user_found = mysqli_fetch_array($result);
-                           echo $user_found['username'];
-                            
-                            ?>
+                               
                             </li>
                         </ol>
+                        <?php
+                        $fetch_user = User::find_user_by_id(2);
+                           $user = User::instantation($fetch_user );
+                           
+                           echo $user->id;
+                        //    $result_set = User :: find_all_users();
+                        //    while($row = mysqli_fetch_array($result_set)){
+                        //       echo $row['username']."<br>";
+                        //    }
+
+                        // $result_set = Userno :: only_first_user();
+                        // while($row = mysqli_fetch_array($result_set)){
+                        //     echo $row['username'];
+                        // }
+                        // $fetch_user = User::find_user_by_id(1);
+                        // echo $fetch_user['username'];
+
+                            
+                            ?>
+
                     </div>
                 </div>
                 <!-- /.row -->
@@ -60,5 +74,4 @@
 
         </div>
         <!-- /#page-wrapper -->
-
   <?php include("includes/footer.php"); ?>
