@@ -46,8 +46,10 @@
                             </li>
                         </ol>
                         <?php
-                        $fetch_user = User::find_user_by_id(2);
-                           $user = User::instantation($fetch_user );
+                        $users = User::find_all_users();
+                       foreach($users as $user){
+                           echo $user->username."<br>";
+                       }
                            
                            echo $user->id;
                         //    $result_set = User :: find_all_users();
