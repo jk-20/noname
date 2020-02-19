@@ -46,12 +46,12 @@
                             </li>
                         </ol>
                         <?php
-                        $users = User::find_all_users();
-                       foreach($users as $user){
-                           echo $user->username."<br>";
-                       }
-                           
-                           echo $user->id;
+                    //     $users = User::find_all_users();
+                    //    foreach($users as $user){
+                    //     echo $user->username."<br>";
+                    //    }
+                      
+                        //    echo $user->id;
                         //    $result_set = User :: find_all_users();
                         //    while($row = mysqli_fetch_array($result_set)){
                         //       echo $row['username']."<br>";
@@ -61,8 +61,8 @@
                         // while($row = mysqli_fetch_array($result_set)){
                         //     echo $row['username'];
                         // }
-                        // $fetch_user = User::find_user_by_id(1);
-                        // echo $fetch_user['username'];
+                        $found_user = User::find_user_by_id(2);
+                        echo $found_user->username;
 
                             
                             ?>
