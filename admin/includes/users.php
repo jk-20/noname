@@ -16,15 +16,21 @@ public static function find_all_users(){
 public static function find_user_by_id($user_id){
     
     $the_result_array = self::find_this_query("SELECT * FROM user WHERE id=$user_id") ;
-    // $found_users = mysqli_fetch_array($result_set);
-    // if(!empty($the_result_array)){
-    //     $first_item = array_shift($the_result_array);
-    //     return $first_item;
-    // }else{
-    //     return false;
-    // }
+   
     return !empty($the_result_array) ? array_shift($the_result_array) : false;
-    return $found_users;
+    
+}
+public static function verify_user(){
+    global $database;
+    $username = $database ->escape_string($username);
+    $password = $database ->escape_string($password);
+
+    $sql = "SELECT * FROM users ";
+    $sql .= "WHERE username='{$username}' ";
+    $sql .= "AND password='{$password}' LIMIT 1";
+
+    $the_result_array = self::find_this_query($sql);
+    return !empty($the_result_array) ? array_shift($the_result_array) : false;
 }
 
 public static function find_this_query($sql){
