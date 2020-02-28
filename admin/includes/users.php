@@ -22,12 +22,12 @@ public static function find_user_by_id($user_id){
 }
 public static function verify_user(){
     global $database;
-    $username = $database ->escape_string($username);
-    $password = $database ->escape_string($password);
+    $username = $database->escape_string($username);
+    $password = $database->escape_string($password);
 
-    $sql = "SELECT * FROM users ";
-    $sql .= "WHERE username='{$username}' ";
-    $sql .= "AND password='{$password}' LIMIT 1";
+    $sql = "SELECT * FROM user WHERE username ='{$username}' AND password ='{$password}' LIMIT 1";
+    // $sql .= "WHERE username ='$username' ";
+    // $sql .= "AND password ='$password' LIMIT 1";
 
     $the_result_array = self::find_this_query($sql);
     return !empty($the_result_array) ? array_shift($the_result_array) : false;

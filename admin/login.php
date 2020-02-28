@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
 
     }
 }else{
-    $message = "";
+    $the_message = "";
     $username ="";
     $password ="";
 }
