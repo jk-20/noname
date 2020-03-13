@@ -9,7 +9,7 @@ function __autoload($class){
     }
 }
 
-function redirect($Location){
+function redirect($location){
     header("Location: {$location}");
 }
 

@@ -54,10 +54,13 @@ if(!$session->is_sign_in()){
                         </ol>
                         <?php
                   
-                        $found_user = User::find_user_by_id(2);
-                        echo $found_user->username;
-                        
-
+                    //    $user = new User();
+                    //    $user->username = "ilive";
+                    //    $user->password = "123";
+                    //    $user->create();
+                            $user = User::find_user_by_id(3);
+                            $user->first_name = "mrBEEn";
+                            $user->update();
                             
                             ?>
 
