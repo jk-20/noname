@@ -58,9 +58,9 @@ if(!$session->is_sign_in()){
                     //    $user->username = "ilive";
                     //    $user->password = "123";
                     //    $user->create();
-                            $user = User::find_user_by_id(3);
-                            $user->first_name = "mrBEEn";
-                            $user->update();
+                            $user = User::find_user_by_id(9);
+                           
+                            $user->delete();
                             
                             ?>
 
