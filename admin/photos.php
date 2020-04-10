@@ -45,31 +45,19 @@
         <th>File description</th>
         </thead>
         <tbody>
-        <?php // $Photos = Photo::find_all();
-           //foreach ($Photos as $Photo) {
-            // echo "<tr>";
-        
-
-            // echo "<td><img src='$Photo->file_name' alt='' width='40px' height='50px'></td>";
-            // echo "<td>$Photo->id</td>";
-            // echo "<td>$Photo->title</td>";
-            // echo "<td>$Photo->size</td>";
-            // echo "<td>$Photo->description</td>";
-            
-            // echo "</tr>";  
-           //} ?>
+       
            <?php $photos = Photo::find_all(); ?>
            <?php foreach($photos as $photo) :?>
 
            <tr>
            
-           <td><img src="<?php echo $photo->picture_path(); ?>" alt="" width='70px' height='50px'>
+           <td><img src="<?php echo $photo->picture_path(); ?>" alt="" height="150px" width=150px" class="thumbnail">
          
            <div class="picture-link">
-             <br>
-           <a href="delete_photo.php/?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-primary">Delete</a>
-           <a href="" class="btn btn-xs btn-primary">Edit</a>
-           <a href="" class="btn btn-xs btn-primary">View</a>
+             
+           <a href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-danger">Delete</a>
+           <a href="edit_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-warning">Edit</a>
+           <a href="" class="btn btn-xs btn-success">View</a>
            </div>
            
            </td>
@@ -80,7 +68,7 @@
            </tr>
            <?php endforeach; ?>
            
-      
+     
        
         </tbody>
         </table>

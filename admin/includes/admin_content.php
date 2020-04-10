@@ -55,10 +55,10 @@
     // $user->password = "123";
     // $user->save();
 
-        $user = new User();
-        $user->username = "jeet";
-        $user->first_name = "jeet";
-        $user->save();
+        // $user = new User();
+        // $user->username = "jeet";
+        // $user->first_name = "jeet";
+        // $user->save();
         
 
 
@@ -83,8 +83,21 @@
         // $create_photo->title = "jeet";
         // $create_photo->file_name = "image";
         // $create_photo->save();
-        echo INCLUDES_PATH;
-        ?>
+        // echo INCLUDES_PATH;
+
+    // $hi ="";
+    //     if($hi){
+    //         echo "hi";
+    //     }else{
+    //         echo " why you here ?";
+    //     }
+    //     // $say_hi;
+
+// $photo = Photo::find_by_id(34);
+// $caption = $photo->caption = "second";
+// $photo->save();
+// echo $caption;
+      ?>
     </div>
 </div>
 <!-- /.row -->

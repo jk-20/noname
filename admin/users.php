@@ -1,5 +1,6 @@
 <?php include("includes/header.php"); ?>
-
+<?php 
+  if(!$session->is_signed_in()){ redirect("login.php");}?>
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,6 +31,45 @@
                 <i class="fa fa-file"></i> Blank Page
             </li>
         </ol>
+
+
+        <div class="col-md-12">
+
+        <table class="table table-hover">
+        <thead>
+        <th>ID</th>
+        <th>Photo</th>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last name</th>
+        </thead>
+        <tbody>
+       
+           <?php $users = User::find_all(); ?>
+           <?php foreach($users as $user) :?>
+
+           <tr>
+           <td><?php echo $user->id; ?></td>
+           <td><img src="<?php echo $user->user_image_placeholder(); ?>" alt="" height="100px" width="100px" class="thumbnail"> </td>
+           
+           <td><?php echo $user->username; ?>
+           <div class="actions-link">
+             
+           <a href="delete_user.php?id=<?php echo $user->id; ?>" class="btn btn-xs btn-danger">Delete</a>
+           <a href="edit_user.php?id=<?php echo $user->id; ?>" class="btn btn-xs btn-warning">Edit</a>
+           <a href="" class="btn btn-xs btn-success">View</a>
+           </div>
+           </td>
+           <td><?php echo $user->first_name ;?></td>
+           <td><?php echo $user->last_name;?></td>
+           </tr>
+           <?php endforeach; ?>
+           
+     
+       
+        </tbody>
+        </table>
+        </div>
     </div>
 </div>
 <!-- /.row -->
