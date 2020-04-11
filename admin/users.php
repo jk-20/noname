@@ -28,9 +28,12 @@
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
             </li>
             <li class="active">
-                <i class="fa fa-file"></i> Blank Page
+                <i class="fa fa-user"></i>  <a href="add_user.php" class="btn btn-xs btn-primary">Add user</a>
             </li>
+           
         </ol>
+
+          
 
 
         <div class="col-md-12">
@@ -57,7 +60,7 @@
              
            <a href="delete_user.php?id=<?php echo $user->id; ?>" class="btn btn-xs btn-danger">Delete</a>
            <a href="edit_user.php?id=<?php echo $user->id; ?>" class="btn btn-xs btn-warning">Edit</a>
-           <a href="" class="btn btn-xs btn-success">View</a>
+
            </div>
            </td>
            <td><?php echo $user->first_name ;?></td>

@@ -5,27 +5,28 @@
 
 
   <?php
-  $id = $_GET['id'];
-  if(empty($_GET['id'])){
-    $id = $_GET['id'];
-      redirect("photos.php");
-  }else{ 
+                  if(empty($_GET['id'])){
+                  redirect("photos.php");
+                  }else{
+                    $photo = Photo::find_by_id($_GET['id']);
+                    if(isset($_POST['update'])){
+                    
+                        
+                            
+                            
+                             $photo->title = $_POST['title'];
+                            $photo->caption = $_POST['caption'];
+                            $photo->alternate_text = $_POST['alternate_text'];
+                            $photo->description = $_POST['description'];
 
-    $photo = Photo::find_by_id($id);
-    if(isset($_POST['update'])){
-        if($photo){
-            
-            $photo->id = $_GET['id'];
-            $photo->title = $_POST['title'];
-            $photo->caption = $_POST['caption'];
-            $photo->alternate_text = $_POST['alternate_text'];
-            $photo->description = $_POST['description'];
+                            $photo->save();
+                      
+                    }
+                  }
+ 
 
-            $photo->save();
-        }
-       
-    }
-  }
+   
+  
   
   
   
@@ -65,7 +66,7 @@
         
         <div class="col-md-8">
         
-        <form action="edit_photo.php" method="post">
+        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="form-group">
        
         <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
