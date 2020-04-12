@@ -66,7 +66,7 @@
         
         <div class="col-md-8">
         
-        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action="" method="post">
         <div class="form-group">
        
         <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
