@@ -12,15 +12,30 @@
                     if(isset($_POST['update'])){
                     
                         
-                            
-                            
-                            $user->username = $_POST['username'];
-                            $user->password = $_POST['password'];
-                            $user->first_name = $_POST['first_name'];
-                            $user->last_name = $_POST['last_name'];
+                            if($user){
 
-                            $user->save();
-                      
+
+                              
+                              $user->username = $_POST['username'];
+                              $user->password = $_POST['password'];
+                              $user->first_name = $_POST['first_name'];
+                              $user->last_name = $_POST['last_name'];
+
+                              if(empty($_FILES['user_image'])){
+                                $user->save();
+                              }else{
+                                $user->set_file($_FILES['user_image']);
+                                $user->upload_photo();
+                                $user->save();
+                                redirect("edit_user.php?id={$user->id}");
+                              }
+                              
+  
+                              
+                        
+                            }
+                            
+                           
                     }
                   }
  
@@ -66,7 +81,10 @@
         
         <div class="col-md-8">
         
-        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+
+
+        
         <div class="form-group">
         <label for="username">username</label>
         <input type="text" name="username" class="form-control" value="<?php echo $user->username; ?>">
@@ -85,7 +103,10 @@
         <input type="text" name="last_name" class="form-control" value="<?php echo $user->last_name; ?>">
         </div>
        
-      
+        <div class="form-group">
+        
+        <input type="file" name="user_image">
+        </div>
        
         </div>
 
@@ -97,7 +118,8 @@
                             <div class="inside">
                               <div class="box-inner">
                               <div class="form-group">
-            <a href="" class="thumbnail"><img src="<?php echo $user->user_image_placeholder(); ?> "alt=""></a>
+                      <a href="" class="thumbnail"><img src="<?php echo $user->user_image_placeholder(); ?> 
+                      "alt="" height="100px" width="150px" class="thumbnail"></a>
         
                                     </div>
                               </div>

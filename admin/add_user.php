@@ -17,9 +17,9 @@
             $user->last_name = $_POST['last_name'];
             $user->password = $_POST['password'];
             $user->set_file($_FILES['user_image']);
-            $user->save_photo_and_user();
+            $user->save();
 
-            if($user->save_photo_and_user()){
+            if($user->save()){
                 $message = "<h1 class='text-success'>user create  successfully</h1>";
             }else{
                 $message = join("<br>", $user->errors);

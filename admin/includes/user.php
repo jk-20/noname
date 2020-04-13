@@ -33,17 +33,7 @@ class  User extends Db_object {
 
             return empty($this->user_image) ? $this->image_placeholder : $this->upload_directory.DS.$this->user_image;
          }
-    //     public function user_image_placeholder(){
-    //      return $this->upload_directory . DS . $this->user_image;
-    //  }
-   // public function user_image_placeholder(){
-
-   //    return empty($this->user_image) ? $this->image_placeholder : $this->upload_directory.DS.$this->user_image;
-   // }
-
-//    public function user_image_placeholder(){
-//       return $this->upload_directory . DS . $this->user_image;
-//   }
+ 
    public function set_file($file) {
             
       if(empty($file) || !$file || !is_array($file)){
@@ -60,10 +50,8 @@ class  User extends Db_object {
       }
   }
 
-   public function save_photo_and_user(){
-       if($this->id){
-           $this->update();
-       }else{
+   public function upload_photo(){
+    
            if(!empty($this->errors)){
                return false;
            }
@@ -77,17 +65,19 @@ class  User extends Db_object {
                return false;
            }
            if(move_uploaded_file($this->tmp_path, $target_path)){
-               if($this->create()){
+              
                    unset($this->tmp_path);
                    return true;
+               
                }else{
                   $this->errors[] = "file directory probably does not have permission to write  ";
                   return false;
               }
+              $this->create();
            }
-           $this->create();
-       }
-   }  
+          
+       
+ 
 
 
 
