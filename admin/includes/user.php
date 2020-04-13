@@ -12,8 +12,8 @@ class  User extends Db_object {
     public $user_image;
     public $tmp_path;
     public $upload_directory = "images";
-//     public $image_placeholder = "../images/about-1.jpg";
-   //  public $image_placeholder = "http://placehold.it400x400&text=image";
+
+    public $image_placeholder = "http://placehold.it400x400&text=image";
 
     public $errors = array();
        public  $upload_errors_array = array(
@@ -28,9 +28,14 @@ class  User extends Db_object {
         UPLOAD_ERR_EXTENSION        => "A php extension stopped the file upload."
         
         );
+
         public function user_image_placeholder(){
-         return $this->upload_directory . DS . $this->user_image;
-     }
+
+            return empty($this->user_image) ? $this->image_placeholder : $this->upload_directory.DS.$this->user_image;
+         }
+    //     public function user_image_placeholder(){
+    //      return $this->upload_directory . DS . $this->user_image;
+    //  }
    // public function user_image_placeholder(){
 
    //    return empty($this->user_image) ? $this->image_placeholder : $this->upload_directory.DS.$this->user_image;

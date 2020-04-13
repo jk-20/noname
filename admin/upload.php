@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
             </li>
             <li class="active">
-                <i class="fa fa-file"></i> Blank Page
+                <i class="fa fa-file"></i><a href="index.php"> Home</a>
             </li>
         </ol>
 

@@ -74,29 +74,7 @@ protected static $db_table_field = array('id','title','caption','description','f
              }
          }   
             
-        // public function save(){
-        //     if($this->id){
-        //         $this->update();
-        //     }else{
-        //         if(!empty($this->errors)){
-        //             return false;
-        //         }
-        //         if(empty($this->file_name) || empty($this->tmp_path)){
-        //             $this->errors[] = "the file was not available";
-        //             return false;
-        //         }
-
-        //         $target_path = SITE_ROOT . DS . 'admin' . DS . $this->$upload_directory . DS . $this->file_name;
-
-
-
-        //         $this->create();
-        //     }
-
-
-
-
-        // }
+       
         
         
         public function picture_path(){
