@@ -47,7 +47,12 @@
         </thead>
         <tbody>
        
-           <?php $comments = Comment::find_all(); ?>
+           <?php 
+           if(empty($_GET['id'])){
+               redirect("photos.php");
+           }
+           
+           ?>
            <?php foreach($comments as $comment) :?>
 
            <tr>

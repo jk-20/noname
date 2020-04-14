@@ -57,7 +57,7 @@
              
            <a href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-danger">Delete</a>
            <a href="edit_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-warning">Edit</a>
-           <a href="" class="btn btn-xs btn-success">View</a>
+           <a href="../photo.php?id=<?php echo $photo->id; ?>" class="btn btn-xs btn-success">View</a>
            </div>
            
            </td>
