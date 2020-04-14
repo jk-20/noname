@@ -1,3 +1,22 @@
+<?php require_once("admin/includes/init.php");?>
+<?php
+
+if(empty($_GET['id'])){
+    redirect("index.php");
+}
+
+    $photo = Photo::find_by_id($_GET['id']);
+
+
+    if(isset($_POST['submit'])){
+        echo "you are good ";
+    }
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,11 +123,16 @@
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                    <form role="form" method="post">
+                    <div class="form-group">
+                    <label for="author">Name</label>
+                            <input type="text" name="author" class="form-control" placeholder="john Doe">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="form-group">
+                       
+        <textarea class="form-control" rows="3" name="body" placeholder="type your message here"></textarea>
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
 
