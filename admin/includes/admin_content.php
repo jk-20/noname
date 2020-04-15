@@ -8,98 +8,112 @@
             Blank Page
             <small>Subheading</small>
         </h1>
-        <ol class="breadcrumb">
-            <li>
-                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-            </li>
-            <li class="active">
-                <i class="fa fa-file"></i> Blank Page
-            </li>
-        </ol>
-
-        <?php
-      
-    //    $users = User::find_all();
-    //    foreach ($users as $user) {
-    //        echo $user->username."<br>";
-    //        # code...
-    //    }
        
-       
-    //   $found_user = User::find_user_by_id(1);
-    //  $user = User::instantation($found_user);
-    //     echo $user->username."<br>";
-    //     echo $user->first_name;
-    // $found_user = User::find_user_by_id(2);
-    // echo $found_user->username;
-
-
-    // $photos = new Photos();
-
-    // $user = new User();
-    // $user->username = "keya";
-    // $user->password = "keya";
-    // $user->first_name = "keya the";
-    // $user->last_name = "fucking robot";
-
-    // $user->create();
-    // $update_user = User::find_user_by_id(8);
-    // $update_user->find_user_by_id(9);
-   
-    // $update_user->username = "john007";
-    // $update_user->password = "007";
-    // $update_user->first_name = "john";
-    // $update_user->last_name = "doe";
-    // $update_user->update();
-    // $user = User::find_user_by_id(10);
-    // $user->password = "123";
-    // $user->save();
-
-        // $user = new User();
-        // $user->username = "jeet";
-        // $user->first_name = "jeet";
-        // $user->save();
-        
-
-
-        // $Photos = Photo::find_all();
-        //    foreach ($Photos as $Photo) {
-        //        echo $Photo->id."<br>";
-        //        echo $Photo->title."<br>";
-        //        echo $Photo->description."<br>";
-        //        # code...
-        //    }
-
-        //      $photo = new Photo();
-        // $photo->title = "hello";
-        // $Photo->file_name = "mypic.jpeg";
-        // // $Photo->type = "image";
-        // // $Photo->size = 11;
-        // $photo->create();
-           
-        // $delete= Photo::find_by_id(5);
-        // $delete->delete();
-        // $create_photo = new Photo();
-        // $create_photo->title = "jeet";
-        // $create_photo->file_name = "image";
-        // $create_photo->save();
-        // echo INCLUDES_PATH;
-
-    // $hi ="";
-    //     if($hi){
-    //         echo "hi";
-    //     }else{
-    //         echo " why you here ?";
-    //     }
-    //     // $say_hi;
-
-// $photo = Photo::find_by_id(34);
-// $caption = $photo->caption = "second";
-// $photo->save();
-// echo $caption;
-      ?>
     </div>
 </div>
 <!-- /.row -->
+<div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-users fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">4</div>
+                                        <div>New Views</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    
+                                  <span class="pull-left">View Details</span> 
+                               <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span> 
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-photo fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">7</div>
+                                        <div>Photos</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Total Photos in Gallery</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-user fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">8
+
+                                        </div>
+
+                                        <div>Users</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Total Users</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">8</div>
+                                        <div>Comments</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Total Comments</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                        </div> <!--First Row-->
+                        <div class="row">
+                        <div id="piechart" style="width: 900px; height: 500px;"></div>
+                        
+                        </div>
 </div>
