@@ -43,6 +43,7 @@
         <th>Title</th>
         <th>Size</th>
         <th>File description</th>
+        <th>Comments</th>
         </thead>
         <tbody>
        
@@ -65,6 +66,20 @@
            <td><?php echo $photo->title; ?></td>
            <td><?php echo $photo->size ;?></td>
            <td><?php echo $photo->description;?></td>
+
+           <td>
+           <a href="comment_photo.php?id=<?php echo $photo->id; ?>">
+           
+           <?php
+           
+           $comments = Comment::find_the_comment($photo->id);
+           
+           echo count($comments);?>
+           
+           </a>
+          
+           
+           </td>
            </tr>
            <?php endforeach; ?>
            

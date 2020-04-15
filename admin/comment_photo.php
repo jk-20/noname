@@ -52,6 +52,10 @@
                redirect("photos.php");
            }
            
+           $comments = Comment::find_the_comment($_GET['id']);
+
+
+
            ?>
            <?php foreach($comments as $comment) :?>
 
@@ -62,7 +66,7 @@
            <td><?php echo $comment->author; ?>
            <div class="actions-link">
              
-           <a href="delete_comment.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-danger">Delete</a>
+           <a href="delete_comment_photo.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-danger">Delete</a>
            <!-- <a href="edit_comment.php?id=<?php echo $comment->id; ?>" class="btn btn-xs btn-warning">Edit</a> -->
 
            </div>
