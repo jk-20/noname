@@ -35,15 +35,7 @@ class Db_object {
                 public static function instantation($the_record){
                     $calling_class = get_called_class();
                     $the_object = new $calling_class;
-                    // $the_object->username = $found_user['username'];
-                    // $the_object->first_name = $found_user['first_name'];
-                    // $the_object->last_name = $found_user['last_name'];
-        
-                    //the_record comes from database
-                    //the_attribute is the properties that i define public id username so on
-                    //if the_object found attribute or properties then its assign value into it
-        
-        
+                
                 foreach ($the_record as $the_attribute => $value) {
                     if($the_object->has_the_attribute($the_attribute)){
                         $the_object->$the_attribute = $value;
@@ -130,6 +122,17 @@ class Db_object {
         $sql .=" LIMIT 1";
         $database->query($sql);
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+    }
+
+
+
+    public static function count_all(){
+
+        global $database;
+        $sql = "SELECT COUNT(*) FROM ".static::$db_table;
+        $result_set = $database->query($sql);
+        $row = mysqli_fetch_array($result_set);
+        return array_shift($row);
     }
 
 }

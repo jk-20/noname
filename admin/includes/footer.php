@@ -20,14 +20,18 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['View',     <?php echo $session->count; ?>],
+          ['Comments', <?php echo Comment::count_all(); ?>],
+          ['Users',  <?php echo User::count_all(); ?>],
+          ['Photo',      <?php echo Photo::count_all(); ?>],
+        
+          // ['Sleep',    7]
         ]);
 
         var options = {
+          legend: 'none',
+          pieSliceText: 'label',
+          backgroundColor: 'transparent',
           title: 'My Daily Activities'
         };
 
