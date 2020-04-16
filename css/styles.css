@@ -4,3 +4,16 @@
     width: 200px;
     height: 150px !important ; 
 }
+
+
+/* pagination class */
+
+
+.pager .active a{
+    background-color: skyblue;
+    color: white;
+}
+.pager .active a:hover{
+ 
+    color: blue;
+}
