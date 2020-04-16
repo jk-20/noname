@@ -11,7 +11,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-12">
            
-    <div class="row thumbnail">
+    <div class="row">
     <?php foreach ($photos as $photo):?>
     <div class="col-xs-6 col-md-3">
  
