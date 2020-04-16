@@ -27,6 +27,11 @@ class Paginate{
         return $this->current_page - 1;
     }
 
+
+    public function page_total(){
+        return ceil($this->item_total_count/$this->item_per_page);
+    }
+
 }
 
 
