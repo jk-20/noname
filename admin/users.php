@@ -20,8 +20,8 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-           users page 
-            <small>Subheading</small>
+         All Users
+           
         </h1>
         <ol class="breadcrumb">
             <li>

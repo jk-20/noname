@@ -20,16 +20,14 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-           comments page 
-            <small>Subheading</small>
+         All Comments
+            
         </h1>
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
-            </li>
-            <li class="active">
-                <i class="fa fa-comment"></i>  <a href="add_comment.php" class="btn btn-xs btn-primary">Add comment</a>
-            </li>
+            </li> 
+           
            
         </ol>
 
