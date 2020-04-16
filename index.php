@@ -35,7 +35,27 @@
     
     </div>
  
-         
+         <div class="row">
+       <ul class="pager">
+
+
+       <?php
+       
+       if($paginate->page_total()>1){
+             if($paginate->has_next()){
+                echo "<li class='next'><a href=''>next</a></li>"  ;
+             }
+       }
+       
+       
+       ?>
+       <!-- <li class="previous"><a href="">previous</a></li>
+          -->
+       
+       </ul>
+
+
+         </div>
 
             </div>
 
