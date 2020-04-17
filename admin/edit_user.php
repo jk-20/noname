@@ -47,6 +47,61 @@
   
   
   ?>
+
+<!-- modal code here  -->
+
+
+<div class="modal fade" id="photo-library">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Gallery System Library</h4>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-9">
+             <div class="thumbnails row">
+            
+                <!-- PHP LOOP HERE CODE HERE-->
+                
+               <div class="col-xs-2">
+                 <a role="checkbox" aria-checked="false" tabindex="0" id="" href="#" class="thumbnail">
+                   <img class="modal_thumbnails img-responsive" src="<!-- PHP LOOP HERE CODE HERE-->" data="<!-- PHP LOOP HERE CODE HERE-->">
+                 </a>
+                  <div class="photo-id hidden"></div>
+               </div>
+
+                    <!-- PHP LOOP HERE CODE HERE-->
+
+             </div>
+          </div><!--col-md-9 -->
+
+  <div class="col-md-3">
+    <div id="modal_sidebar"></div>
+  </div>
+
+   </div><!--Modal Body-->
+      <div class="modal-footer">
+        <div class="row">
+               <!--Closes Modal-->
+              <button id="set_user_image" type="button" class="btn btn-primary" disabled="true" data-dismiss="modal">Apply Selection</button>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+<!-- modal code end -->
+
+
+
+
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -118,7 +173,8 @@
                             <div class="inside">
                               <div class="box-inner">
                               <div class="form-group">
-                      <a href="" class="thumbnail"><img src="<?php echo $user->user_image_placeholder(); ?> 
+ <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo-library">
+ <img src="<?php echo $user->user_image_placeholder(); ?> 
                       "alt="" height="100px" width="150px" class="thumbnail"></a>
         
                                     </div>
