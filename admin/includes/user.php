@@ -68,7 +68,7 @@ class  User extends Db_object {
               
                    unset($this->tmp_path);
                    return true;
-               
+                
                }else{
                   $this->errors[] = "file directory probably does not have permission to write  ";
                   return false;
@@ -121,7 +121,12 @@ class  User extends Db_object {
    //       }
    //   }
 
+public function ajax_save_user_image($user_image, $user_id){
 
+    $this->user_image = $user_image;
+    $this->id = $user_id;
+    $this->save();
+}
    
 
     
