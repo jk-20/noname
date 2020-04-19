@@ -35,7 +35,7 @@ image_name = image_src_splitted[image_src_splitted.length -1];
         success:function(data){
             if(!data.error){
                
-                $(".user_image_box a img").prop('src', data)
+                $(".user_image_box a img").prop('src', data);
             }
         }
 

@@ -128,13 +128,12 @@
                                    <h4>User profile picture<span id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span></h4>
                                 </div>
                             <div class="inside">
-                              <div class="box-inner">
-                              <div class="form-group">
+                              <div class="user_image_box">
+                              
  <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo-library">
  <img src="<?php echo $user->user_image_placeholder(); ?> 
                       "alt="" height="100px" width="150px" class="thumbnail"></a>
         
-                                    </div>
                               </div>
                               <div class="info-box-footer clearfix">
                                 <div class="info-box-delete pull-left">
