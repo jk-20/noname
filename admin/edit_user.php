@@ -129,9 +129,7 @@
                                 </div>
                             <div class="inside">
                               <div class="user_image_box">
-                              
- <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo-library">
- <img src="<?php echo $user->user_image_placeholder(); ?> 
+<a href="#" class="thumbnail" data-toggle="modal" data-target="#photo-library"><img src="<?php echo $user->user_image_placeholder(); ?> 
                       "alt="" height="100px" width="150px" class="thumbnail"></a>
         
                               </div>
