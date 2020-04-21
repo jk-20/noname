@@ -44,7 +44,7 @@ $photos = Photo::find_all();
              </div>
           </div><!--col-md-9 -->
 
-  <div class="col-md-3">
+  <div class="col-md-3"> 
     <div id="modal_sidebar"></div>
   </div>
 
