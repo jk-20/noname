@@ -79,19 +79,19 @@
     <div class="col-lg-12">
         <h1 class="page-header">
           Edit users page 
-            <small>Subheading</small>
+          
         </h1>
-        <ol class="breadcrumb">
-            <li>
-                <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
-            </li>
-            <li class="active">
-                <i class="fa fa-file"></i> <a href="users.php">Back</a>
-            </li>
-        </ol>
-
+       
+<div class="col-md-6">
+<div class="user_image_box">
+<a href="#" class="thumbnail" data-toggle="modal" data-target="#photo-library"><img src="<?php echo $user->user_image_placeholder(); ?> 
+                      "alt=""></a>
         
-        <div class="col-md-8">
+                              </div>
+
+</div>
+        
+        <div class="col-md-6">
         
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 
@@ -122,17 +122,11 @@
        
         </div>
 
-        <div class="col-md-4" >
-                            <div  class="user-info-box">
-                                <div class="info-box-header">
-                                   <h4>User profile picture<span id="toggle" class="glyphicon glyphicon-menu-up pull-right"></span></h4>
-                                </div>
-                            <div class="inside">
-                              <div class="user_image_box">
-<a href="#" class="thumbnail" data-toggle="modal" data-target="#photo-library"><img src="<?php echo $user->user_image_placeholder(); ?> 
-                      "alt="" height="100px" width="150px" class="thumbnail"></a>
         
-                              </div>
+                          
+                               
+                            <div class="inside">
+                             
                               <div class="info-box-footer clearfix">
                                 <div class="info-box-delete pull-left">
                                     <a id="user-id" href="delete_user.php?id=<?php echo $user->id; ?>" class="btn btn-danger btn-md ">Delete</a>   
@@ -142,10 +136,10 @@
                                 </div>   
                               </div>
                             </div>          
-                        </div>
-                    </div>
+                     
+                   
                     </form>
-    </div>
+  
 </div>
 <!-- /.row -->
 
