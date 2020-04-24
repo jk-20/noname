@@ -52,7 +52,7 @@
 
            <tr>
            
-           <td><img src="<?php echo $photo->picture_path(); ?>" alt="" height="150px" width=150px" class="thumbnail">
+           <td><img src="<?php echo $photo->picture_path(); ?>" alt="" height="70px" width=70px" class="thumbnail">
          
            <div class="picture-link">
              
